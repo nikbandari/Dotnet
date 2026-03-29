@@ -1,0 +1,4 @@
+sonar.projectKey=nikethbandari_nb
+sonar.organization=nikethbandari 
+sonar.host.url=https://sonarqube.caci.co.uk 
+sonar.login=glpat-L7dzWTpoeeWXmrEQkx1y
