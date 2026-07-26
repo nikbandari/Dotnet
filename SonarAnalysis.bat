@@ -1,3 +1,11 @@
-dotnet sonarscanner begin /k:"SampleCACISonarProject" /d:sonar.host.url="http://localhost:9000"  /d:sonar.token="sqp_18b1b2d8ab55dee6e109c4a2dd2e5156f5bcbe70"
+@echo off
+REM Requires SONAR_TOKEN to be set in the environment (never commit tokens).
+if "%SONAR_TOKEN%"=="" (
+  echo ERROR: SONAR_TOKEN environment variable is not set.
+  exit /b 1
+)
+if "%SONAR_HOST_URL%"=="" set SONAR_HOST_URL=http://localhost:9000
+
+dotnet sonarscanner begin /k:"SampleCACISonarProject" /d:sonar.host.url="%SONAR_HOST_URL%" /d:sonar.token="%SONAR_TOKEN%"
 dotnet build
-dotnet sonarscanner end /d:sonar.token="sqp_18b1b2d8ab55dee6e109c4a2dd2e5156f5bcbe70"
+dotnet sonarscanner end /d:sonar.token="%SONAR_TOKEN%"
