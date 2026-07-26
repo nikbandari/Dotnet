@@ -1,4 +1,5 @@
 sonar.projectKey=nikethbandari_nb
-sonar.organization=nikethbandari 
-sonar.host.url=https://sonarqube.caci.co.uk 
-sonar.login=glpat-L7dzWTpoeeWXmrEQkx1y
+sonar.organization=nikethbandari
+sonar.host.url=https://sonarqube.caci.co.uk
+# Do not store credentials here. Pass the token at analysis time instead:
+#   sonar-scanner -Dsonar.token=$SONAR_TOKEN
